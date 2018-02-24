@@ -23,8 +23,8 @@ site.post('http://WEBSITE_URL/LOGIN_ACTION', data=login_data)
 # Get the data we're interested in after logging in
 print("Scraping...")
 scrape1 = site.get('http://URL_TO_SCRAPE')
-scrapeLength1 = scrape1.text.__sizeof__()
-print("Scrape size: ", scrapeLength1)
+scrapeLength1 = scrape1.text.__len__()
+print("Scrape length: ", scrapeLength1)
 print("Standing by for updates...")
 
 # Loop indefinitely
@@ -34,11 +34,11 @@ while True:
     time.sleep(300)
 
     scrape2 = site.get('http://URL_TO_SCRAPE')
-    scrapeLength2 = scrape1.text.__sizeof__()
+    scrapeLength2 = scrape1.text.__len__()
 
     # Compare size of two scrapes, if the new scrape size is bigger, it means the site got updated
     if scrapeLength2 > scrapeLength1 :
-        print("Update found, size: ", scrapeLength2)
+        print("Update found, length: ", scrapeLength2)
         print("Pushing to devices")
 
         # Set the new scrape length as the new comparison length
