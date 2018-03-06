@@ -32,8 +32,8 @@ with open('Birthdays.csv', 'w', newline='', encoding='utf-8') as f:
         cContent = ws[c].value
 
         # Read Date
-        if (cContent[0:17] == 'DTEND;VALUE=DATE:') :
-            # Exclude: DTEND;VALUE=DATE:yyyy
+        if (cContent[0:17] == 'DTSTART;VALUE=DATE:') :
+            # Exclude: DTSTART;VALUE=DATE:yyyy
             date = cContent[21:]
             if date[0:2] == '01':
                 date = " January " + date[2:]
