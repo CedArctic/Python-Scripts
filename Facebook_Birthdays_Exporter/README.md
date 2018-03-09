@@ -12,3 +12,6 @@ csv & openpyxl for python.
 5. Run the Python Script in my repository (csv and openpyxl must be installed) and drag n drop the Excel file at the prompt and hit enter.
 
 Results will appear in a Birthdays.csv file in the script's directory.
+
+# Resources
+https://www.contactually.com/blog/3-facebook-contacts-workarounds-to-give-you-control-of-your-network
